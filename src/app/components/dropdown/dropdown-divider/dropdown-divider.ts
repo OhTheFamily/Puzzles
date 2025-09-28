@@ -1,7 +1,7 @@
 import { Component, HostBinding } from '@angular/core';
 
 @Component({
-  selector: 'DropdownDivider',
+  selector: 'dropdown-divider',
   standalone: false,
   templateUrl: './dropdown-divider.html',
   styleUrl: './dropdown-divider.scss'

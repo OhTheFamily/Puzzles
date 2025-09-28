@@ -1,7 +1,7 @@
 import { Component, input } from '@angular/core';
 
 @Component({
-  selector: 'NavbarItem',
+  selector: 'navbar-item',
   standalone: false,
   templateUrl: './navbar-item.html',
   styleUrl: './navbar-item.scss'

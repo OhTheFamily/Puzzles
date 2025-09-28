@@ -1,7 +1,7 @@
 import { Component, HostBinding, input, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'SidebarFooter',
+  selector: 'sidebar-footer',
   standalone: false,
   templateUrl: './sidebar-footer.html',
   styleUrl: './sidebar-footer.scss'

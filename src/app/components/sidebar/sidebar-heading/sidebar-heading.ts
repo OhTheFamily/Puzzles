@@ -1,7 +1,7 @@
 import { Component, HostBinding } from '@angular/core';
 
 @Component({
-  selector: 'SidebarHeading',
+  selector: 'sidebar-heading',
   standalone: false,
   templateUrl: './sidebar-heading.html',
   styleUrl: './sidebar-heading.scss'

@@ -1,7 +1,7 @@
 import { Component, HostBinding } from '@angular/core';
 
 @Component({
-  selector: 'SidebarSpacer',
+  selector: 'sidebar-spacer',
   standalone: false,
   templateUrl: './sidebar-spacer.html',
   styleUrl: './sidebar-spacer.scss'

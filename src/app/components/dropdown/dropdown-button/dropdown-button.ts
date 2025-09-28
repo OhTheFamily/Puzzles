@@ -1,7 +1,7 @@
 import { Component, HostBinding, HostListener, input, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'DropdownButton',
+  selector: 'dropdown-button',
   standalone: false,
   templateUrl: './dropdown-button.html',
   styleUrl: './dropdown-button.scss'

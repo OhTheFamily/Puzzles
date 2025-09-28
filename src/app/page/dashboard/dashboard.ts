@@ -1,8 +1,7 @@
 import { Component, signal } from '@angular/core';
-import { CardComponent } from "../../components/card/card";
 
 @Component({
-  selector: 'DashboardPage',
+  selector: 'dashboard-page',
   templateUrl: './dashboard.html',
   styleUrl: './dashboard.scss',
   standalone: false

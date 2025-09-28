@@ -1,7 +1,7 @@
 import { Component, HostBinding } from '@angular/core';
 
 @Component({
-  selector: 'SidebarBody',
+  selector: 'sidebar-body',
   standalone: false,
   templateUrl: './sidebar-body.html',
   styleUrl: './sidebar-body.scss'

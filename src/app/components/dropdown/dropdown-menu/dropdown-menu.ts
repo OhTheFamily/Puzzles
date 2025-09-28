@@ -1,7 +1,7 @@
 import { Component, effect, HostBinding, input, OnInit, signal } from '@angular/core';
 
 @Component({
-  selector: 'DropdownMenu',
+  selector: 'dropdown-menu',
   standalone: false,
   templateUrl: './dropdown-menu.html',
   styleUrl: './dropdown-menu.scss'

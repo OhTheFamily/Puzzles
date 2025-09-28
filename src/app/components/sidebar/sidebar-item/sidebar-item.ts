@@ -1,7 +1,7 @@
 import { Component, HostBinding, input } from '@angular/core';
 
 @Component({
-  selector: 'SidebarItem',
+  selector: 'sidebar-item',
   standalone: false,
   templateUrl: './sidebar-item.html',
   styleUrl: './sidebar-item.scss'

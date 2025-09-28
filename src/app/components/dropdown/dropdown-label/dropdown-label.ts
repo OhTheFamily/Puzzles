@@ -1,7 +1,7 @@
 import { Component, HostBinding } from '@angular/core';
 
 @Component({
-  selector: 'DropdownLabel',
+  selector: 'dropdown-label',
   standalone: false,
   templateUrl: './dropdown-label.html',
   styleUrl: './dropdown-label.scss'

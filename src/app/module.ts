@@ -6,7 +6,6 @@ import { RouterModule } from '@angular/router';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { NgxEchartsModule } from 'ngx-echarts';
 import { AppComponent } from './app';
-import { routes } from './routes';
 import { Avatar } from './components/avatar/avatar';
 import { Dropdown } from './components/dropdown/dropdown';
 import { DropdownButton } from './components/dropdown/dropdown-button/dropdown-button';
@@ -32,6 +31,7 @@ import { BaseLayout } from './layout/base/base';
 import { SidebarLayout } from './layout/sidebar/sidebar';
 import { DashboardPage } from './page/dashboard/dashboard';
 import { StatisticPage } from './page/statistic/statistic';
+import { routes } from './routes';
 
 registerLocaleData(localeFr, 'fr-FR');
 

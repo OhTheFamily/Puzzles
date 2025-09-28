@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { Chart } from 'chart.js';
 
 @Component({
-  selector: 'StatisticPage',
+  selector: 'statistic-page',
   templateUrl: './statistic.html',
   styleUrl: './statistic.scss',
   standalone: false
