@@ -1,0 +1,54 @@
+:host {
+  display: inline-grid;
+  flex-shrink: 0;
+  font-size: var(--text-base);
+  font-weight: var(--font-weight-medium);
+  line-height: calc(var(--spacing) * 6);
+  text-align: left;
+  color: var(--color-zinc-950);
+  border-radius: 3.40282e+38px;
+  vertical-align: middle;
+  outline-style: var(--tw-outline-style);
+  outline-width: 1px;
+  outline-offset: calc(1px * -1);
+  outline-color: #0000001a;
+  cursor: default;
+
+  &[data-slot=avatar] {
+    width: calc(var(--spacing) * 7);
+    height: calc(var(--spacing) * 7);
+    margin: calc(var(--spacing) * -.5);
+  }
+
+  @supports (color:color-mix(in lab, red, red)) {
+    outline-color:
+      color-mix(in oklab, var(--color-black) 10%, transparent);
+  }
+}
+
+.avatar-img {
+  grid-row-start: 1;
+  grid-column-start: 1;
+  border-radius: 3.40282e+38px;
+}
+
+@media (min-width: 40rem) {
+  :host {
+    width: calc(var(--spacing) * 6);
+    height: calc(var(--spacing) * 6);
+    font-size: var(--text-sm);
+    line-height: calc(var(--spacing) * 5);
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :host {
+    color: var(--color-white);
+    outline-color: #ffffff1a;
+
+    @supports (color:color-mix(in lab, red, red)) {
+      outline-color:
+        color-mix(in oklab, var(--color-white) 10%, transparent);
+    }
+  }
+}

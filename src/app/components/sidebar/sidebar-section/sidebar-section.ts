@@ -4,10 +4,7 @@ import { Component, HostBinding, input, OnInit } from '@angular/core';
   selector: 'SidebarSection',
   standalone: false,
   templateUrl: './sidebar-section.html',
-  styleUrl: './sidebar-section.css',
-  host: {
-    '[attr.data-slot]': 'section',
-  }
+  styleUrl: './sidebar-section.scss',
 })
 export class SidebarSection implements OnInit {
   @HostBinding('attr.data-slot') slot: string = 'section';

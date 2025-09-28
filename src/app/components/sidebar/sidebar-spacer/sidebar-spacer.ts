@@ -4,7 +4,7 @@ import { Component, HostBinding } from '@angular/core';
   selector: 'SidebarSpacer',
   standalone: false,
   templateUrl: './sidebar-spacer.html',
-  styleUrl: './sidebar-spacer.css'
+  styleUrl: './sidebar-spacer.scss'
 })
 export class SidebarSpacer {
   @HostBinding('class') class: string = 'mt-8 flex-1';

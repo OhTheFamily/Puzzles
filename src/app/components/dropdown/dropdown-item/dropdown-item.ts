@@ -4,7 +4,7 @@ import { Component, input } from '@angular/core';
   selector: 'DropdownItem',
   standalone: false,
   templateUrl: './dropdown-item.html',
-  styleUrl: './dropdown-item.css'
+  styleUrl: './dropdown-item.scss'
 })
 export class DropdownItem {
   public href = input.required<string>();

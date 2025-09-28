@@ -4,7 +4,7 @@ import { CardComponent } from "../../components/card/card";
 @Component({
   selector: 'DashboardPage',
   templateUrl: './dashboard.html',
-  styleUrl: './dashboard.css',
+  styleUrl: './dashboard.scss',
   standalone: false
 })
 export class DashboardPage {

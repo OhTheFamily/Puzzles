@@ -4,7 +4,7 @@ import { Component, HostBinding, HostListener, input, OnInit } from '@angular/co
   selector: 'DropdownButton',
   standalone: false,
   templateUrl: './dropdown-button.html',
-  styleUrl: './dropdown-button.css'
+  styleUrl: './dropdown-button.scss'
 })
 export class DropdownButton implements OnInit {
   @HostBinding('class') class: string = '';

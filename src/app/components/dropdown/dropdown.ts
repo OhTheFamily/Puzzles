@@ -1,16 +1,14 @@
-import { AfterContentInit, Component, ContentChild, HostBinding } from '@angular/core';
+import { AfterContentInit, Component, ContentChild } from '@angular/core';
 import { DropdownButton } from './dropdown-button/dropdown-button';
 import { DropdownMenu } from './dropdown-menu/dropdown-menu';
 
 @Component({
-  selector: 'Dropdown',
+  selector: 'dropdown',
   standalone: false,
   templateUrl: './dropdown.html',
-  styleUrl: './dropdown.css'
+  styleUrl: './dropdown.scss'
 })
 export class Dropdown implements AfterContentInit {
-  @HostBinding('class') class: string = 'relative';
-
   @ContentChild('button') button!: DropdownButton;
   @ContentChild('menu') menu!: DropdownMenu;
 

@@ -2,10 +2,10 @@ import { Component, HostBinding, input, OnInit, signal } from '@angular/core';
 import { fa0, faCoffee, faHome, faChevronDown, IconDefinition, faSliders, faChartSimple, faCircleQuestion, faSprayCanSparkles } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
-  selector: 'Icon',
+  selector: 'icon',
   standalone: false,
   templateUrl: './icon.html',
-  styleUrl: './icon.css'
+  styleUrl: './icon.scss'
 })
 export class Icon implements OnInit {
   @HostBinding('attr.data-slot') slot: string = 'icon';

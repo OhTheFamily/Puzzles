@@ -4,7 +4,7 @@ import { Component } from '@angular/core';
   selector: 'NavbarSection',
   standalone: false,
   templateUrl: './navbar-section.html',
-  styleUrl: './navbar-section.css'
+  styleUrl: './navbar-section.scss'
 })
 export class NavbarSection {
 

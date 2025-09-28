@@ -1,10 +1,10 @@
 import { Component, HostBinding } from '@angular/core';
 
 @Component({
-  selector: 'SidebarLabel',
+  selector: 'sidebar-label',
   standalone: false,
   templateUrl: './sidebar-label.html',
-  styleUrl: './sidebar-label.css'
+  styleUrl: './sidebar-label.scss'
 })
 export class SidebarLabel {
   @HostBinding('class') class: string = 'truncate';

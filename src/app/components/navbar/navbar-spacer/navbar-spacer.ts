@@ -4,7 +4,7 @@ import { Component } from '@angular/core';
   selector: 'NavbarSpacer',
   standalone: false,
   templateUrl: './navbar-spacer.html',
-  styleUrl: './navbar-spacer.css'
+  styleUrl: './navbar-spacer.scss'
 })
 export class NavbarSpacer {
 

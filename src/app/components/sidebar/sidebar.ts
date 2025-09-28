@@ -1,11 +1,11 @@
-import { Component, HostBinding } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
-  selector: 'Sidebar',
+  selector: 'sidebar',
   standalone: false,
   templateUrl: './sidebar.html',
-  styleUrl: './sidebar.css'
+  styleUrl: './sidebar.scss'
 })
 export class SidebarComponent {
-  @HostBinding('class') class: string = 'flex h-full min-h-0 flex-col';
+
 }

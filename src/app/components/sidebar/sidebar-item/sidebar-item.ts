@@ -4,7 +4,7 @@ import { Component, HostBinding, input } from '@angular/core';
   selector: 'SidebarItem',
   standalone: false,
   templateUrl: './sidebar-item.html',
-  styleUrl: './sidebar-item.css'
+  styleUrl: './sidebar-item.scss'
 })
 export class SidebarItem {
   @HostBinding('class') class: string = 'relative';

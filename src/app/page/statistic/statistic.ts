@@ -4,7 +4,7 @@ import { Chart } from 'chart.js';
 @Component({
   selector: 'StatisticPage',
   templateUrl: './statistic.html',
-  styleUrl: './statistic.css',
+  styleUrl: './statistic.scss',
   standalone: false
 })
 export class StatisticPage {

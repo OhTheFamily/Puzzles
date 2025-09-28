@@ -4,7 +4,7 @@ import { Component, HostBinding } from '@angular/core';
   selector: 'DropdownLabel',
   standalone: false,
   templateUrl: './dropdown-label.html',
-  styleUrl: './dropdown-label.css'
+  styleUrl: './dropdown-label.scss'
 })
 export class DropdownLabel {
   @HostBinding('class') class: string = 'col-start-2 row-start-1';

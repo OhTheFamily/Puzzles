@@ -1,0 +1,51 @@
+:host {
+  font-size: var(--text-base);
+  font-weight: var(--font-weight-medium);
+  line-height: calc(var(--spacing) * 6);
+  color: var(--color-zinc-950);
+  display: flex;
+  width: 100%;
+  cursor: default;
+  align-items: center;
+  gap: calc(var(--spacing) * 3);
+  border-radius: var(--radius-lg);
+  padding-inline: calc(var(--spacing) * 2);
+  padding-block: calc(var(--spacing) * 2.5);
+  text-align: left;
+
+  &:active {
+    background-color: #09090b0d;
+  }
+
+  @supports (color:color-mix(in lab, red, red)) {
+    &:hover {
+      background-color:
+        color-mix(in oklab, var(--color-zinc-950) 5%, transparent);
+    }
+  }
+}
+
+@media (width >=40rem) {
+  :host {
+    font-size: var(--text-sm);
+    line-height: calc(var(--spacing) * 5);
+    padding-block: calc(var(--spacing) * 2);
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :host {
+    color: var(--color-white);
+
+    &:active {
+      background-color: #ffffff0d;
+    }
+
+    @supports (color:color-mix(in lab, red, red)) {
+      &:hover {
+        background-color:
+          color-mix(in oklab, var(--color-white) 5%, transparent);
+      }
+    }
+  }
+}

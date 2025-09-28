@@ -1,12 +1,14 @@
-import { Component, input } from '@angular/core';
+import { Component, HostBinding, input } from '@angular/core';
 
 @Component({
-  selector: 'Avatar',
+  selector: 'avatar',
   standalone: false,
   templateUrl: './avatar.html',
-  styleUrl: './avatar.css'
+  styleUrl: './avatar.scss'
 })
 export class Avatar {
+  @HostBinding('attr.data-slot') slot: string = 'avatar';
+
   public src = input<string>('');
   public initials = input<string>('');
 }
