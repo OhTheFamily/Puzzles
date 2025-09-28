@@ -1,0 +1,26 @@
+<div class="bg-gray-50 rounded-xl shadow hover:shadow-lg transition">
+	<!-- Image -->
+	<img [src]="puzzle().image" alt="Image" class="rounded-t-xl w-full h-42 object-cover">
+
+	<div class="p-2 lg:py-4 lg:px-6">
+		<!-- Titre + Description -->
+		<div class="mb-2">
+			<h3 class="text-lg font-bold text-gray-800 mb-1">{{ puzzle().titre }}</h3>
+			<p class="text-sm text-gray-500 mb-1">⏱️ Durée estimée : {{ puzzle().tempsEstime }}</p>
+			<p class="text-sm text-gray-500">{{ puzzle().description }}</p>
+		</div>
+
+		<!-- Infos textuelles -->
+		<div class="text-sm text-gray-700 space-y-1">
+			<div class="flex justify-between gap-4 mb-2">
+				<span class="text-yellow-400">{{ puzzle().etoiles }}</span>
+				<span class="font-medium">{{ puzzle().progression }}%</span>
+			</div>
+		</div>
+
+		<!-- Barre de progression -->
+		<div class="w-full bg-gray-200 rounded-full h-1.5">
+			<div class="bg-amber-500 h-1.5 rounded-full" [style.width.%]="puzzle().progression"></div>
+		</div>
+	</div>
+</div>

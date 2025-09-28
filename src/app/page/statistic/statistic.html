@@ -1,0 +1,63 @@
+<!-- Header -->
+<header class="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between mb-6">
+	<div>
+		<h1 class="text-2xl sm:text-3xl font-semibold">Statistiques</h1>
+		<p class="text-slate-500 text-sm">Données fictives de puzzles (Angular + Tailwind + Chart.js)</p>
+	</div>
+</header>
+
+<!-- KPI Cards -->
+<section class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+	<div class="bg-white rounded-xl p-6 shadow border border-slate-100">
+		<p class="text-sm text-slate-500">Puzzles résolus</p>
+		<p class="text-3xl font-semibold">{{ stats.solved }}</p>
+		<p class="mt-2 text-xs text-emerald-600">+{{ stats.solvedDelta }}% ce mois</p>
+	</div>
+	<div class="bg-white rounded-xl p-6 shadow border border-slate-100">
+		<p class="text-sm text-slate-500">Temps moyen</p>
+		<p class="text-3xl font-semibold">{{ stats.avg }} min</p>
+		<p class="mt-2 text-xs text-rose-600">-{{ stats.avgDelta }}% vs mois dernier</p>
+	</div>
+	<div class="bg-white rounded-xl p-6 shadow border border-slate-100">
+		<p class="text-sm text-slate-500">Visiteurs</p>
+		<p class="text-3xl font-semibold">{{ stats.users }}</p>
+		<p class="mt-2 text-xs text-emerald-600">+{{ stats.usersDelta }}% cette année</p>
+	</div>
+</section>
+
+<!-- Charts -->
+<section class="grid grid-cols-1 xl:grid-cols-3 gap-6 mb-8">
+	<div class="xl:col-span-2 bg-white rounded-xl p-6 shadow border border-slate-100">
+		<h2 class="font-semibold mb-4">Puzzles résolus par mois</h2>
+		<canvas id="chartSolves"></canvas>
+	</div>
+	<div class="bg-white rounded-xl p-6 shadow border border-slate-100">
+		<h2 class="font-semibold mb-4">Répartition par catégorie</h2>
+		<canvas id="chartCategories"></canvas>
+	</div>
+</section>
+
+<!-- Table -->
+<section class="bg-white rounded-xl p-6 shadow border border-slate-100">
+	<h2 class="font-semibold mb-4">Derniers puzzles joués</h2>
+	<table class="min-w-full text-sm">
+		<thead>
+			<tr class="text-left text-slate-500">
+				<th class="py-3 pr-6">Puzzle</th>
+				<th class="py-3 pr-6">Joueur</th>
+				<th class="py-3 pr-6">Catégorie</th>
+				<th class="py-3 pr-6">Temps</th>
+			</tr>
+		</thead>
+		<tbody class="divide-y divide-slate-100">
+			@for (row of recentRows; track row.title) {
+			<tr>
+				<td class="py-2 pr-6">{{ row.title }}</td>
+				<td class="py-2 pr-6">{{ row.player }}</td>
+				<td class="py-2 pr-6">{{ row.cat }}</td>
+				<td class="py-2 pr-6">{{ row.time }}</td>
+			</tr>
+			}
+		</tbody>
+	</table>
+</section>

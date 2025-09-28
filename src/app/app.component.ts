@@ -1,15 +1,15 @@
-import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
-import { FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
-import { HeaderComponent } from "./header/header.component";
+import { Component, OnInit, signal } from '@angular/core';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { EChartsOption } from 'echarts';
+import { initFlowbite } from 'flowbite';
 
 @Component({
-  selector: 'app-root',
-  imports: [RouterOutlet, FormsModule, HeaderComponent, ReactiveFormsModule],
+  selector: 'App',
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
+  standalone: false
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   public puzzleForm = new FormGroup({
     titre: new FormControl<string>('', [Validators.required]),
     description: new FormControl<string>('', []),
@@ -51,6 +51,61 @@ export class AppComponent {
       description: "Voyagez à travers l’espace avec ce puzzle cosmique."
     },
   ];
+
+  // Graphique en barres
+  barChartOptions: EChartsOption = {
+    title: { text: 'Progression des puzzles (%)' },
+    tooltip: {},
+    xAxis: { data: ['Puzzle 1', 'Puzzle 2', 'Puzzle 3', 'Puzzle 4'] },
+    yAxis: {},
+    series: [{ type: 'bar', data: [40, 75, 90, 60], color: '#F97316' }]
+  };
+
+  // Graphique en ligne
+  lineChartOptions: EChartsOption = {
+    title: { text: 'Temps passé (minutes)' },
+    tooltip: { trigger: 'axis' },
+    xAxis: { type: 'category', data: ['Lun', 'Mar', 'Mer', 'Jeu', 'Ven'] },
+    yAxis: { type: 'value' },
+    series: [{ type: 'line', data: [120, 90, 150, 80, 200], smooth: true, color: '#2563EB' }]
+  };
+
+  // Graphique en camembert
+  pieChartOptions: EChartsOption = {
+    title: { text: 'Répartition des difficultés', left: 'center' },
+    tooltip: { trigger: 'item' },
+    legend: { orient: 'vertical', left: 'left' },
+    series: [{
+      type: 'pie',
+      radius: '70%',
+      data: [
+        { value: 2, name: '★' },
+        { value: 5, name: '★★' },
+        { value: 8, name: '★★★' },
+        { value: 4, name: '★★★★' },
+        { value: 1, name: '★★★★★' }
+      ]
+    }]
+  };
+
+  // Graphique en aires
+  areaChartOptions: EChartsOption = {
+    title: { text: 'Pièces assemblées par jour' },
+    tooltip: { trigger: 'axis' },
+    xAxis: { type: 'category', boundaryGap: false, data: ['Lun', 'Mar', 'Mer', 'Jeu', 'Ven'] },
+    yAxis: { type: 'value' },
+    series: [{
+      type: 'line',
+      data: [200, 350, 500, 250, 400],
+      areaStyle: {},
+      smooth: true,
+      color: '#10B981'
+    }]
+  };
+
+  public ngOnInit() {
+    initFlowbite()
+  }
 
   filteredPuzzles() {
     return this.puzzles.filter(p =>
